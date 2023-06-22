@@ -1,0 +1,9 @@
+<p>parent works!</p>
+<app-child (click)="getDataFormChild($event)" [giveMeData]="myName"></app-child>
+<!-- {{myName}} -->
+<!-- <input type="text"[value]="myName" #nameInput> -->
+<input type="text" #message>
+
+<button (click)="sendDataToChild(message)">Send</button>
+
+

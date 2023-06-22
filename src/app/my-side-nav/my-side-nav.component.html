@@ -1,0 +1,34 @@
+<!-- <button (click)="toogleMenu()">Menu</button>
+<div class="my-side-nav" *ngIf="isMenuOpen" class="my-side-nav">
+<ul *ngFor="let item of menuItems">
+    <li>{{item.name}}</li>
+    
+    
+    
+</ul>
+<button [disabled]="menuItems.length>=7" (click)="addMenu()">Add</button>  
+    </div>
+
+    <i class="fas fa-thumbs-up"></i>
+    
+    <button appRoundButton>Click Me</button>
+
+    <button (click)="isMenuOpen =! isMenuOpen"></button>
+    <div class="my-side-nav"[ngStyle]="{'width':isMenuOpen ?'300px':'0px'}">
+        <ng-container *ngFor="let item of menuItems">
+            <div class="d-flex">
+                <i aria-hidden="true" class="{{item.icon}}"></i>
+                {{item.name}}
+            </div>
+        </ng-container>
+        <button (click)="menuItems.push({name:'my name',icon:'s'})">add</button>
+    </div> -->
+<button (click)="isMenuOpen =! isMenuOpen">Menu</button>
+<div class="my-side-nav isMenuOpen" *ngIf="isMenuOpen" >
+    <ng-container *ngFor="let item of menuItems">
+        <div class="d-flex">
+            <i aria-hidden="true" class="{{item.icon}}"></i>{{item.name}}
+        </div>
+    </ng-container>
+    <button (click)="menuItems.push({name:'my name',icon:'s'})">add</button>
+</div> 
