@@ -27,10 +27,12 @@ import { TableComponent } from './table/table.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 const route:Routes=[
   {path:'Home',component:DashBoardComponent},
-  {path:'Table',component:TableComponent}
+  {path:'Table',component:TableComponent},
+  {path:'user-details',component:UserDetailsComponent}
 ]
 
 
@@ -47,7 +49,8 @@ const route:Routes=[
     RoundButtonDirective,
     SideNavComponent,
     DashBoardComponent,
-    TableComponent
+    TableComponent,
+    UserDetailsComponent
   ],
   imports: [             //here we import all structures on our webpg
     BrowserModule, 
