@@ -1,0 +1,13 @@
+<div class="d-flex container">
+    <input type="text" #imageType class="form-control=width:20px">
+    <input type="number" #imageCount (keydown.enter)="getImgs(imageType.value,imageCount.value)">
+</div>
+
+   
+
+
+<mat-grid-list cols="4" rowHeight="200px">
+    <mat-grid-tile *ngFor="let image of data">
+      <img [src]=" image.src.medium" [alt]="image.alt">
+    </mat-grid-tile>
+  </mat-grid-list>

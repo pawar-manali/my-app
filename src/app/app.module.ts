@@ -28,11 +28,14 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { SearchImagesComponent } from './search-images/search-images.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const route:Routes=[
   {path:'Home',component:DashBoardComponent},
   {path:'Table',component:TableComponent},
-  {path:'user-details',component:UserDetailsComponent}
+  {path:'user-details',component:UserDetailsComponent},
+  {path:'Search',component:SearchImagesComponent}
 ]
 
 
@@ -50,7 +53,8 @@ const route:Routes=[
     SideNavComponent,
     DashBoardComponent,
     TableComponent,
-    UserDetailsComponent
+    UserDetailsComponent,
+    SearchImagesComponent
   ],
   imports: [             //here we import all structures on our webpg
     BrowserModule, 
@@ -67,7 +71,8 @@ const route:Routes=[
     RouterModule.forRoot(route),
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
