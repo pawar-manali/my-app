@@ -30,12 +30,14 @@ import { MatSortModule } from '@angular/material/sort';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { SearchImagesComponent } from './search-images/search-images.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ZoomImageComponent } from './zoom-image/zoom-image.component';
 
 const route:Routes=[
   {path:'Home',component:DashBoardComponent},
   {path:'Table',component:TableComponent},
   {path:'user-details',component:UserDetailsComponent},
-  {path:'Search',component:SearchImagesComponent}
+  {path:'Search',component:SearchImagesComponent},
+  {path:'Zoom-Image',component:ZoomImageComponent},
 ]
 
 
@@ -54,7 +56,8 @@ const route:Routes=[
     DashBoardComponent,
     TableComponent,
     UserDetailsComponent,
-    SearchImagesComponent
+    SearchImagesComponent,
+    ZoomImageComponent
   ],
   imports: [             //here we import all structures on our webpg
     BrowserModule, 
