@@ -8,6 +8,8 @@
 
 <mat-grid-list cols="4" rowHeight="200px">
     <mat-grid-tile *ngFor="let image of data">
-      <img [src]=" image.src.medium" [alt]="image.alt">
+      <img [src]="image.src.medium" (click)="imageService.selectedImge = image.src.medium;navigateToImage()" [alt]="image.alt">
     </mat-grid-tile>
   </mat-grid-list>
+
+  <app-zoom-image></app-zoom-image>

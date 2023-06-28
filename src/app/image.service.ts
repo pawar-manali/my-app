@@ -11,7 +11,7 @@ const headerOptions=new HttpHeaders({
   providedIn: 'root'
 })
 export class ImageService {
-  
+  public selectedImge = '';
   constructor(private http: HttpClient) { }
 
   getData(type:any,count:any):Observable<any>{
